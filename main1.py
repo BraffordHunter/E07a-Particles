@@ -14,18 +14,18 @@ SCREEN_HEIGHT = 600
 MARGIN = 30
 SCREEN_TITLE = "Particle Exercise"
 
-PARTICLE_MIN_SCALE = 0.01
-PARTICLE_MAX_SCALE = 0.08
-PARTICLE_MIN_X = -20
-PARTICLE_MAX_X = 20
-PARTICLE_VELOCITY_X = 0
-PARTICLE_VELOCITY_Y = 4
-PARTICLE_MIN_AX = -0.1
-PARTICLE_MAX_AX = 0.1
-PARTICLE_MIN_AY = -0.1
-PARTICLE_MAX_AY = 0.1
-PARTICLE_MIN_DECAY = 0.001
-PARTICLE_MAX_DECAY = 0.01
+PARTICLE_MIN_SCALE = 0.07
+PARTICLE_MAX_SCALE = 0.09
+PARTICLE_MIN_X = -10
+PARTICLE_MAX_X = 25
+PARTICLE_VELOCITY_X = 2
+PARTICLE_VELOCITY_Y = 3
+PARTICLE_MIN_AX = -0.3
+PARTICLE_MAX_AX = 0.2
+PARTICLE_MIN_AY = -0.3
+PARTICLE_MAX_AY = 0.4
+PARTICLE_MIN_DECAY = 0.002
+PARTICLE_MAX_DECAY = 0.03
 
 
 class Particle(arcade.Sprite):
@@ -41,11 +41,11 @@ class Particle(arcade.Sprite):
         self.color_pos = 0
 
         self.particle_colors = [
-            (open_color.red_5, 4)
-            ,(open_color.red_4, 5)
-            ,(open_color.red_3, 6)
-            ,(open_color.red_2, 7)
-            ,(open_color.red_1, 8)
+            (open_color.indigo_5, 4)
+            ,(open_color.indigo_4, 5)
+            ,(open_color.indigo_3, 6)
+            ,(open_color.indigo_2, 7)
+            ,(open_color.indigo_1, 8)
             ,(open_color.teal_1, 8)
             ,(open_color.teal_2, 7)
             ,(open_color.teal_3, 6)
@@ -110,7 +110,7 @@ class Window(arcade.Window):
             decay = random.uniform(PARTICLE_MIN_DECAY,PARTICLE_MAX_DECAY)
             scale = random.uniform(PARTICLE_MIN_SCALE,PARTICLE_MAX_SCALE)
             #Particle(asset, sprite scale, initial position [x], initial position [y], velocity [x], velocity [y], acceleration [x], acceleration [y], scale decay)
-            particle = Particle('window_04',scale,x,y,dx,dy,ax,ay,decay)
+            particle = Particle('twirl_03',scale,x,y,dx,dy,ax,ay,decay)
 
             self.particle_list.append(particle)
 
